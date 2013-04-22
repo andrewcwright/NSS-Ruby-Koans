@@ -14,6 +14,10 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
+	raise TriangleError, "impossible triangle" if [a,b,c].min <= 0
+    x, y, z = [a,b,c].sort
+    raise TriangleError, "no two sides can be < than the third" if x + y <= z
+    
 	return :equilateral if a == b && b == c
 	return :isosceles if a == b && a != c
 	return :isosceles if a == c && a != b
