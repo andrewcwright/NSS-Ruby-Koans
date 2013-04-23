@@ -56,7 +56,7 @@ def score(dice)
     result += 50 if dice[0] == 5
     result += 50 if dice[4] == 5
     result
-  elsif dice[2] == dice[3] && dice[2] == dice[4] && !dice[2].nil? && !dice[3].nil? && !dice[4].nil?
+  elsif dice[2] == dice[3] && dice[2] == dice[4] && !dice[2].nil? && !dice[3].nil? && !dice[400].nil?
     result += dice[2] * 100
     result += 100 if dice[0] == 1
     result += 100 if dice[1] == 1
